@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or "SearchMarkets Contact" }}</title>
+    {% if csrf_token %}
+    <meta name="csrf-token" content="{{ csrf_token }}" />
+    {% endif %}
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap");
+
+      :root {
+        color-scheme: light;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        background: #f5f7fb;
+        color: #1f2430;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 120px 16px 64px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .page {
+        width: min(1200px, 100%);
+        display: grid;
+        gap: 24px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.25rem;
+      }
+
+      p {
+        margin: 0;
+        color: #4c5565;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 20px 60px rgba(37, 50, 71, 0.08);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .card-subtitle {
+        color: #5b6375;
+        font-size: 0.95rem;
+      }
+
+      .top-bar {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .search-form {
+        display: grid;
+        grid-template-columns: minmax(240px, 1fr) auto;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid #d8dee9;
+        padding: 14px 16px;
+        font-size: 1rem;
+      }
+
+      button,
+      .btn {
+        border: none;
+        border-radius: 12px;
+        background: #3d63ff;
+        color: #fff;
+        padding: 14px 22px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      button:disabled,
+      .btn[aria-disabled="true"] {
+        background: #a6b4ff;
+        cursor: not-allowed;
+      }
+
+      button:hover:not(:disabled),
+      .btn:hover:not([aria-disabled="true"]) {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 18px rgba(61, 99, 255, 0.3);
+      }
+
+      .btn-secondary {
+        background: #e8edff;
+        color: #2a3cf8;
+      }
+
+      .btn-secondary:hover:not(:disabled),
+      .btn.btn-secondary:hover:not([aria-disabled="true"]) {
+        box-shadow: 0 8px 18px rgba(42, 60, 248, 0.2);
+      }
+
+      .btn-danger {
+        background: #fee4e2;
+        color: #b42318;
+      }
+
+      .btn-danger:hover:not(:disabled) {
+        box-shadow: 0 8px 18px rgba(180, 35, 24, 0.2);
+      }
+
+      .status {
+        margin-top: 16px;
+        font-weight: 600;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .folder-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .folder-item {
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid #e4e9f2;
+        cursor: pointer;
+        background: #f9fafc;
+        display: grid;
+        gap: 4px;
+      }
+
+      .folder-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .folder-item.active {
+        border-color: #3d63ff;
+        background: #eef1ff;
+      }
+
+      .folder-name {
+        font-weight: 600;
+      }
+
+      .folder-meta {
+        font-size: 0.85rem;
+        color: #657089;
+      }
+
+      .file-selector {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      select {
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #d8dee9;
+        background: #fff;
+        font-size: 0.95rem;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .summary-card {
+        background: #f6f8ff;
+        border-radius: 12px;
+        padding: 12px 14px;
+      }
+
+      .summary-label {
+        font-size: 0.8rem;
+        color: #5f6b85;
+      }
+
+      .summary-value {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .table-wrapper {
+        border: 1px solid #e4e9f2;
+        border-radius: 16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      table {
+        width: max-content;
+        min-width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #eef1f7;
+        text-align: left;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+
+      th {
+        background: #f7f9fc;
+        color: #475166;
+        font-weight: 600;
+      }
+
+      .empty {
+        border: 2px dashed #d8dee9;
+        border-radius: 16px;
+        padding: 24px;
+        text-align: center;
+        color: #8a94a8;
+      }
+
+      .footer {
+        text-align: center;
+        color: #8792a6;
+        font-size: 0.9rem;
+      }
+
+      .auth-card {
+        max-width: 440px;
+        margin: 0 auto;
+      }
+
+      .auth-form {
+        display: grid;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .form-group {
+        display: grid;
+        gap: 6px;
+      }
+
+      .helper {
+        font-size: 0.85rem;
+        color: #657089;
+      }
+
+      .alert {
+        padding: 12px 14px;
+        border-radius: 12px;
+        font-weight: 600;
+        margin-top: 12px;
+      }
+
+      .alert.error {
+        background: #fee4e2;
+        color: #b42318;
+      }
+
+      .alert.success {
+        background: #ecfdf3;
+        color: #027a48;
+      }
+
+      .panel-alert {
+        margin: 0 0 8px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+      }
+
+      .auth-links {
+        margin-top: 14px;
+        font-size: 0.9rem;
+        color: #5b6375;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .auth-links a {
+        color: #2a3cf8;
+        text-decoration: none;
+      }
+
+      .auth-links .divider {
+        color: #c0c6d4;
+      }
+
+      .user-panel {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 50;
+      }
+
+      .user-panel__card {
+        width: min(320px, calc(100vw - 32px));
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid #e3e8f2;
+        border-radius: 14px;
+        padding: 12px;
+        box-shadow: 0 18px 40px rgba(37, 50, 71, 0.12);
+        backdrop-filter: blur(8px);
+      }
+
+      .user-panel__title {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #6b7485;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .user-panel__form {
+        display: grid;
+        gap: 8px;
+      }
+
+      .panel-label {
+        font-size: 0.75rem;
+        color: #6b7485;
+        font-weight: 600;
+      }
+
+      .input-compact {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+      }
+
+      .btn-compact {
+        padding: 9px 12px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+      }
+
+      .user-panel__actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 4px;
+      }
+
+      .user-panel__actions .btn,
+      .user-panel__actions button {
+        width: 100%;
+      }
+
+      .user-panel__signed {
+        display: grid;
+        gap: 8px;
+      }
+
+      .user-panel__email {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #1f2430;
+        word-break: break-word;
+      }
+
+      .user-panel__meta {
+        font-size: 0.75rem;
+        color: #6b7485;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding-top: 180px;
+        }
+
+        .search-form {
+          grid-template-columns: 1fr;
+        }
+
+        button {
+          width: 100%;
+        }
+
+        .user-panel {
+          top: 12px;
+          right: 12px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    {% block head_extra %}{% endblock %}
+  </head>
+  <body>
+    <aside class="user-panel">
+      <div class="user-panel__card">
+        {% if user %}
+        <div class="user-panel__signed">
+          <div class="user-panel__meta">Signed in</div>
+          <div class="user-panel__email">{{ user.email }}</div>
+          <form method="post" action="/logout">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+            <button type="submit" class="btn-secondary btn-compact">Logout</button>
+          </form>
+        </div>
+        {% else %}
+        {% set panel_mode = auth_mode if auth_mode in ["login", "register"] else "login" %}
+        <div class="user-panel__title">
+          {{ "Create account" if panel_mode == "register" else "Account Access" }}
+        </div>
+        {% if auth_error %}
+        <div class="panel-alert alert error">{{ auth_error }}</div>
+        {% endif %}
+        {% if auth_message %}
+        <div class="panel-alert alert success">{{ auth_message }}</div>
+        {% endif %}
+        <form
+          method="post"
+          action="{{ '/register' if panel_mode == 'register' else '/login' }}"
+          class="user-panel__form"
+        >
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+          {% if panel_mode == "login" %}
+          <input type="hidden" name="next" value="{{ next_url or request.url.path }}" />
+          {% endif %}
+          {% if panel_mode == "register" %}
+          <label class="panel-label" for="panel-name">Full name</label>
+          <input
+            id="panel-name"
+            name="name"
+            type="text"
+            class="input-compact"
+            autocomplete="name"
+            required
+            value="{{ auth_name or '' }}"
+          />
+          {% endif %}
+          <label class="panel-label" for="panel-email">Email ID</label>
+          <input
+            id="panel-email"
+            name="email"
+            type="email"
+            class="input-compact"
+            autocomplete="email"
+            required
+            value="{{ auth_email or '' }}"
+          />
+          <label class="panel-label" for="panel-password">Password</label>
+          <input
+            id="panel-password"
+            name="password"
+            type="password"
+            class="input-compact"
+            autocomplete="current-password"
+            required
+          />
+          {% if panel_mode == "register" %}
+          <div class="helper">
+            At least 12 characters, with upper and lower case, a number, and a symbol.
+          </div>
+          {% endif %}
+          <div class="user-panel__actions">
+            {% if panel_mode == "register" %}
+            <button type="submit" class="btn-compact">Register</button>
+            <a class="btn btn-secondary btn-compact" href="/">Login</a>
+            {% else %}
+            <button type="submit" class="btn-compact">Login</button>
+            <a class="btn btn-secondary btn-compact" href="/?auth=register">Register</a>
+            {% endif %}
+          </div>
+        </form>
+        {% endif %}
+      </div>
+    </aside>
+    <main class="page">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,622 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <h1>Search Markets Contacts</h1>
+  <p>
+    Browse the results in your personal library, preview each response file, and
+    export complete data to Excel when needed.
+  </p>
+</header>
+
+<section class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-title">Run a new search</div>
+      <div class="card-subtitle">
+        Generate a new personal library from a Search Markets query.
+      </div>
+    </div>
+  </div>
+  <label for="query"><strong>Search Contacts</strong></label>
+  <form class="search-form" id="searchForm">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+    <input
+      id="query"
+      name="query"
+      type="text"
+      placeholder="e.g. Recruitment Agency in London"
+      required
+      {% if not user %}disabled{% endif %}
+    />
+    <button id="submitBtn" type="submit" {% if not user %}disabled{% endif %}>
+      Run Search
+    </button>
+  </form>
+  <div class="status" id="statusText">Ready to search.</div>
+</section>
+
+<section class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-title">Personal library</div>
+      <div class="card-subtitle">
+        Select a folder, pick a response file, and inspect the Search Markets data.
+      </div>
+    </div>
+    <button id="refreshBtn" class="btn-secondary" type="button" {% if not user %}disabled{% endif %}>
+      Refresh
+    </button>
+  </div>
+
+  <div class="layout">
+    <div>
+      <strong>Folders</strong>
+      <div class="folder-list" id="folderList"></div>
+    </div>
+    <div>
+      <div class="file-selector">
+        <label for="fileSelect"><strong>Response file</strong></label>
+        <select id="fileSelect" disabled></select>
+      </div>
+      <div class="summary-grid" id="summaryGrid"></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">Scraped places</div>
+          <div class="card-subtitle" id="resultsSubtitle">
+            Choose a folder to begin.
+          </div>
+        </div>
+        <button
+          id="exportBtn"
+          class="btn-secondary"
+          type="button"
+          disabled
+          {% if not user %}aria-disabled="true"{% endif %}
+        >
+          Export to Excel
+        </button>
+      </div>
+      <div id="results"></div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Powered by the SearchMarkets Contact API - Output folder: <code>Output/</code>
+</div>
+
+<script>
+  const form = document.getElementById("searchForm");
+  const queryInput = document.getElementById("query");
+  const statusText = document.getElementById("statusText");
+  const results = document.getElementById("results");
+  const submitBtn = document.getElementById("submitBtn");
+  const folderList = document.getElementById("folderList");
+  const fileSelect = document.getElementById("fileSelect");
+  const summaryGrid = document.getElementById("summaryGrid");
+  const exportBtn = document.getElementById("exportBtn");
+  const resultsSubtitle = document.getElementById("resultsSubtitle");
+  const refreshBtn = document.getElementById("refreshBtn");
+
+  const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content || "";
+  let isAuthenticated = {{ "true" if user else "false" }};
+  const authLockMessage = "Please sign in to continue.";
+
+  let activeFolder = null;
+  let activeFile = null;
+  const defaultResultColumns = [
+    { scope: "place", key: "title", label: "Company", type: "text" },
+    { scope: "place", key: "rating", label: "Rating", type: "number" },
+    { scope: "place", key: "reviews_count", label: "Reviews", type: "number" },
+    { scope: "place", key: "category", label: "Category", type: "text" },
+    { scope: "place", key: "address", label: "Company Address", type: "text" },
+    { scope: "place", key: "phone", label: "Mobile Number", type: "text" },
+    { scope: "place", key: "website", label: "Website", type: "url" },
+    { scope: "place", key: "socials.facebook", label: "Facebook", type: "url" },
+    { scope: "place", key: "socials.instagram", label: "Instagram", type: "url" },
+    { scope: "place", key: "socials.twitter", label: "Twitter", type: "url" },
+    { scope: "place", key: "socials.linkedin", label: "LinkedIn", type: "url" },
+  ];
+
+  const setStatus = (message, isError = false) => {
+    statusText.textContent = message;
+    statusText.style.color = isError ? "#b42318" : "#1f2430";
+  };
+
+  const clearResults = () => {
+    results.innerHTML = "";
+  };
+
+  const renderEmpty = (message) => {
+    results.innerHTML = "";
+    const empty = document.createElement("div");
+    empty.className = "empty";
+    empty.textContent = message;
+    results.appendChild(empty);
+  };
+
+  const setAuthLockedState = (locked) => {
+    queryInput.disabled = locked;
+    submitBtn.disabled = locked;
+    refreshBtn.disabled = locked;
+    fileSelect.disabled = locked;
+    exportBtn.disabled = locked;
+    if (locked) {
+      setStatus(authLockMessage, true);
+      resultsSubtitle.textContent = authLockMessage;
+      summaryGrid.innerHTML = "";
+      folderList.innerHTML = "";
+      renderEmpty(authLockMessage);
+    }
+  };
+
+  const formatDateTime = (value) => {
+    if (!value) return "-";
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? value : date.toLocaleString();
+  };
+
+  const isEmptyValue = (value) => value === null || value === undefined || value === "";
+
+  const getNestedValue = (payload, dottedKey) => {
+    if (!payload || typeof payload !== "object") return null;
+    let current = payload;
+    for (const key of dottedKey.split(".")) {
+      if (!current || typeof current !== "object" || !(key in current)) {
+        return null;
+      }
+      current = current[key];
+    }
+    return current;
+  };
+
+  const toSafeHttpUrl = (value) => {
+    if (typeof value !== "string" || !value.trim()) return null;
+    try {
+      const parsed = new URL(value.trim());
+      if (parsed.protocol === "http:" || parsed.protocol === "https:") {
+        return parsed.href;
+      }
+    } catch (error) {
+      return null;
+    }
+    return null;
+  };
+
+  const attachHorizontalScrollBehavior = (container) => {
+    if (!container) return;
+    container.addEventListener(
+      "wheel",
+      (event) => {
+        if (container.scrollWidth <= container.clientWidth) return;
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        event.preventDefault();
+        container.scrollLeft += event.deltaY;
+      },
+      { passive: false }
+    );
+  };
+
+  const renderSummary = ({ query, total_results, updated_at, file }) => {
+    summaryGrid.innerHTML = "";
+    const items = [
+      { label: "Query", value: query || "-" },
+      { label: "Total places", value: total_results ?? 0 },
+      { label: "Last updated", value: formatDateTime(updated_at) },
+      { label: "Source file", value: file || "-" },
+    ];
+
+    items.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "summary-card";
+      const label = document.createElement("div");
+      label.className = "summary-label";
+      label.textContent = item.label;
+      const value = document.createElement("div");
+      value.className = "summary-value";
+      value.textContent = `${item.value}`;
+      card.appendChild(label);
+      card.appendChild(value);
+      summaryGrid.appendChild(card);
+    });
+  };
+
+  const renderResults = (places, columns = []) => {
+    clearResults();
+    if (!places.length) {
+      renderEmpty("No results found. Try a different query.");
+      return;
+    }
+    const tableColumns = Array.isArray(columns) && columns.length ? columns : defaultResultColumns;
+
+    const tableWrapper = document.createElement("div");
+    tableWrapper.className = "table-wrapper";
+    tableWrapper.tabIndex = 0;
+    tableWrapper.setAttribute("aria-label", "Results table. Scroll left and right to view all columns.");
+    const table = document.createElement("table");
+    const thead = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+    tableColumns.forEach((column) => {
+      const th = document.createElement("th");
+      th.textContent = column.label || column.key || "-";
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    const tbody = document.createElement("tbody");
+
+    places.forEach((place) => {
+      const row = document.createElement("tr");
+
+      tableColumns.forEach((column) => {
+        const cell = document.createElement("td");
+        const value = getNestedValue(place, column.key || "");
+
+        if (column.key === "title") {
+          const title = document.createElement("strong");
+          title.textContent = isEmptyValue(value) ? "Unknown place" : `${value}`;
+          cell.appendChild(title);
+          row.appendChild(cell);
+          return;
+        }
+
+        if (column.type === "url") {
+          const href = toSafeHttpUrl(value);
+          if (href) {
+            const link = document.createElement("a");
+            link.href = href;
+            link.target = "_blank";
+            link.rel = "noreferrer noopener";
+            link.textContent = "Open";
+            cell.appendChild(link);
+          } else {
+            cell.textContent = "-";
+          }
+          row.appendChild(cell);
+          return;
+        }
+
+        cell.textContent = isEmptyValue(value) ? "-" : `${value}`;
+        row.appendChild(cell);
+      });
+
+      tbody.appendChild(row);
+    });
+
+    table.appendChild(tbody);
+    tableWrapper.appendChild(table);
+    attachHorizontalScrollBehavior(tableWrapper);
+    results.appendChild(tableWrapper);
+  };
+
+  const renderFolderList = (folders) => {
+    folderList.innerHTML = "";
+    if (!folders.length) {
+      const empty = document.createElement("div");
+      empty.className = "empty";
+      empty.textContent = "No output folders yet.";
+      folderList.appendChild(empty);
+      return;
+    }
+
+    folders.forEach((folder) => {
+      const item = document.createElement("div");
+      item.className = `folder-item${folder.name === activeFolder ? " active" : ""}`;
+
+      const header = document.createElement("div");
+      header.className = "folder-header";
+
+      const name = document.createElement("div");
+      name.className = "folder-name";
+      name.textContent = folder.name;
+
+      const deleteButton = document.createElement("button");
+      deleteButton.type = "button";
+      deleteButton.className = "btn-danger btn-compact";
+      deleteButton.textContent = "Delete";
+      deleteButton.disabled = !isAuthenticated;
+      deleteButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        deleteFolder(folder.name);
+      });
+
+      header.appendChild(name);
+      header.appendChild(deleteButton);
+
+      const metaOne = document.createElement("div");
+      metaOne.className = "folder-meta";
+      metaOne.textContent = `${folder.file_count} files - ${
+        folder.has_final ? "Final ready" : "No final file"
+      }`;
+
+      const metaTwo = document.createElement("div");
+      metaTwo.className = "folder-meta";
+      metaTwo.textContent = `Updated ${formatDateTime(folder.last_updated)}`;
+
+      item.appendChild(header);
+      item.appendChild(metaOne);
+      item.appendChild(metaTwo);
+      item.addEventListener("click", () => selectFolder(folder.name));
+      folderList.appendChild(item);
+    });
+  };
+
+  const fetchWithAuth = (url, options = {}) => {
+    const headers = new Headers(options.headers || {});
+    if (csrfToken) {
+      headers.set("X-CSRF-Token", csrfToken);
+    }
+    return fetch(url, {
+      ...options,
+      headers,
+      credentials: "same-origin",
+    });
+  };
+
+  const parseJsonSafe = async (response) => {
+    const text = await response.text();
+    if (!text) return null;
+    try {
+      return JSON.parse(text);
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const expectJson = async (response, fallbackMessage) => {
+    const payload = await parseJsonSafe(response);
+    if (!payload) {
+      throw new Error(fallbackMessage);
+    }
+    return payload;
+  };
+
+  const handleUnauthorized = (response) => {
+    if (response.status === 401) {
+      isAuthenticated = false;
+      setAuthLockedState(true);
+      return true;
+    }
+    return false;
+  };
+
+  const loadFolders = async () => {
+    if (!isAuthenticated) {
+      setAuthLockedState(true);
+      return [];
+    }
+    const response = await fetchWithAuth("/api/output");
+    if (handleUnauthorized(response)) return [];
+    if (!response.ok) {
+      throw new Error("Unable to load output folders");
+    }
+    const payload = await expectJson(response, "Unable to load output folders");
+    renderFolderList(payload.folders || []);
+    return payload.folders || [];
+  };
+
+  const loadFiles = async (folderName) => {
+    if (!isAuthenticated) return [];
+    const response = await fetchWithAuth(
+      `/api/output/files?folder=${encodeURIComponent(folderName)}`
+    );
+    if (handleUnauthorized(response)) return [];
+    if (!response.ok) {
+      throw new Error("Unable to load response files");
+    }
+    const payload = await expectJson(response, "Unable to load response files");
+    return payload.files || [];
+  };
+
+  const loadResults = async (folderName, fileName) => {
+    if (!isAuthenticated) return null;
+    const response = await fetchWithAuth(
+      `/api/output/results?folder=${encodeURIComponent(folderName)}&file=${encodeURIComponent(fileName)}`
+    );
+    if (handleUnauthorized(response)) return null;
+    if (!response.ok) {
+      throw new Error("Unable to load results");
+    }
+    return expectJson(response, "Unable to load results");
+  };
+
+  const selectFolder = async (folderName, options = {}) => {
+    if (!isAuthenticated) {
+      setAuthLockedState(true);
+      return;
+    }
+    const { refreshList = true } = options;
+    activeFolder = folderName;
+    activeFile = null;
+    exportBtn.disabled = false;
+    resultsSubtitle.textContent = "Select a response file to preview the results.";
+    renderSummary({ query: "-", total_results: 0, updated_at: "-", file: "-" });
+    clearResults();
+    renderEmpty("Select a response file to view results.");
+
+    if (refreshList) {
+      await loadFolders();
+    }
+
+    const files = await loadFiles(folderName);
+    fileSelect.disabled = false;
+    fileSelect.innerHTML = "";
+    files.forEach((file) => {
+      const option = document.createElement("option");
+      option.value = file.name;
+      option.textContent = `${file.name}${file.is_final ? " (final)" : ""}`;
+      fileSelect.appendChild(option);
+    });
+
+    if (files.length) {
+      fileSelect.value = files.find((file) => file.is_final)?.name || files[0].name;
+      await selectFile(fileSelect.value);
+    } else {
+      renderEmpty("No response files found for this folder.");
+      summaryGrid.innerHTML = "";
+      exportBtn.disabled = true;
+    }
+  };
+
+  const selectFile = async (fileName) => {
+    if (!isAuthenticated) return;
+    if (!activeFolder) return;
+    activeFile = fileName;
+    const payload = await loadResults(activeFolder, fileName);
+    if (!payload) return;
+    const data = payload.data || {};
+    renderSummary({
+      query: data.query,
+      total_results: data.total_results,
+      updated_at: payload.updated_at,
+      file: payload.file,
+    });
+    resultsSubtitle.textContent = `Showing ${data.total_results || 0} places.`;
+    renderResults(data.places || [], payload.columns || []);
+  };
+
+  const deleteFolder = async (folderName) => {
+    if (!isAuthenticated) {
+      setAuthLockedState(true);
+      return;
+    }
+    const confirmed = window.confirm(
+      `Delete output folder "${folderName}"? This removes all response files.`
+    );
+    if (!confirmed) return;
+
+    setStatus(`Deleting "${folderName}"...`);
+    try {
+      const response = await fetchWithAuth(
+        `/api/output/delete?folder=${encodeURIComponent(folderName)}`,
+        { method: "DELETE" }
+      );
+      if (handleUnauthorized(response)) return;
+      const payload = await parseJsonSafe(response);
+      if (!response.ok) {
+        throw new Error(payload?.detail || "Unable to delete output folder.");
+      }
+
+      if (activeFolder === folderName) {
+        activeFolder = null;
+        activeFile = null;
+        exportBtn.disabled = true;
+        fileSelect.disabled = true;
+        fileSelect.innerHTML = "";
+        summaryGrid.innerHTML = "";
+        resultsSubtitle.textContent = "Choose a folder to begin.";
+        renderEmpty("Select a folder to view results.");
+      }
+
+      const folders = await loadFolders();
+      if (folders.length) {
+        if (!activeFolder || !folders.some((folder) => folder.name === activeFolder)) {
+          await selectFolder(folders[0].name, { refreshList: false });
+        }
+      } else {
+        renderEmpty("No output data yet. Run a scrape to get started.");
+        exportBtn.disabled = true;
+        fileSelect.disabled = true;
+      }
+
+      setStatus(payload?.message || `Deleted "${folderName}".`);
+    } catch (error) {
+      setStatus(error.message || "Unable to delete output folder.", true);
+    }
+  };
+
+  const downloadExport = () => {
+    if (!isAuthenticated) {
+      setStatus(authLockMessage, true);
+      renderEmpty(authLockMessage);
+      return;
+    }
+    if (!activeFolder) return;
+    const url = `/api/output/export?folder=${encodeURIComponent(activeFolder)}&csrf_token=${encodeURIComponent(
+      csrfToken
+    )}`;
+    window.location.assign(url);
+  };
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!isAuthenticated) {
+      setAuthLockedState(true);
+      return;
+    }
+    const query = queryInput.value.trim();
+    if (!query) {
+      setStatus("Please enter a search query.", true);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    setStatus("Scraping in progress. This can take a couple of minutes...");
+    clearResults();
+
+    try {
+      const response = await fetchWithAuth(`/api/scrape?query=${encodeURIComponent(query)}`);
+      if (handleUnauthorized(response)) return;
+      const payload = await parseJsonSafe(response);
+      if (!response.ok) {
+        throw new Error(payload?.detail || "Scrape failed");
+      }
+      if (!payload) {
+        throw new Error(
+          "Empty response from server. The scrape may still be running or the server restarted."
+        );
+      }
+
+      const data = payload;
+      setStatus(`Found ${data.total_results} unique places for "${data.query}".`);
+      await loadFolders();
+      await selectFolder(data.query, { refreshList: false });
+    } catch (error) {
+      setStatus(error.message || "Something went wrong.", true);
+      renderEmpty("Unable to load results. Please try again.");
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  fileSelect.addEventListener("change", async (event) => {
+    const value = event.target.value;
+    if (value) {
+      await selectFile(value);
+    }
+  });
+
+  exportBtn.addEventListener("click", downloadExport);
+
+  refreshBtn.addEventListener("click", async () => {
+    if (!isAuthenticated) {
+      setAuthLockedState(true);
+      return;
+    }
+    try {
+      await loadFolders();
+    } catch (error) {
+      renderEmpty("Unable to refresh output folders.");
+    }
+  });
+
+  (async () => {
+    try {
+      if (!isAuthenticated) {
+        setAuthLockedState(true);
+        return;
+      }
+      const folders = await loadFolders();
+      if (folders.length) {
+        await selectFolder(folders[0].name, { refreshList: false });
+      } else {
+        renderEmpty("No output data yet. Run a scrape to get started.");
+        exportBtn.disabled = true;
+        fileSelect.disabled = true;
+      }
+    } catch (error) {
+      renderEmpty("Unable to load output data.");
+    }
+  })();
+</script>
+{% endblock %}

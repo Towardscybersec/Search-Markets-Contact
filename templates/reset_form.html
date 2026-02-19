@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <h1>Choose a new password</h1>
+  <p>Set a strong password to secure your account.</p>
+</header>
+
+<section class="card auth-card">
+  <div class="card-title">Reset password</div>
+  <div class="card-subtitle">This link expires shortly after it is issued.</div>
+
+  {% if error %}
+  <div class="alert error">{{ error }}</div>
+  {% endif %}
+
+  {% if valid %}
+  <form method="post" action="/reset/{{ token }}" class="auth-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+    <div class="form-group">
+      <label for="password">New password</label>
+      <input id="password" name="password" type="password" autocomplete="new-password" required />
+      <div class="helper">
+        At least 12 characters, with upper and lower case, a number, and a symbol.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="confirm_password">Confirm password</label>
+      <input
+        id="confirm_password"
+        name="confirm_password"
+        type="password"
+        autocomplete="new-password"
+        required
+      />
+    </div>
+    <button type="submit">Update password</button>
+  </form>
+  {% else %}
+  <div class="auth-links">
+    <a href="/reset">Request a new reset link</a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

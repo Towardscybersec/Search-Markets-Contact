@@ -1,0 +1,367 @@
+2026-01-20 00:30:13,295 - INFO - Starting 10 scraping iterations for query: 'restaurants in NYC'
+2026-01-20 00:30:13,295 - INFO - Output directory: Output\restaurants in NYC
+2026-01-20 00:30:13,295 - INFO - === Starting iteration 1/10 ===
+2026-01-20 00:36:02,881 - INFO - Iteration 1: Found 49 places
+2026-01-20 00:36:02,882 - INFO - Saved to: Output\restaurants in NYC\response1.json
+2026-01-20 00:36:02,882 - INFO - === Starting iteration 2/10 ===
+2026-01-20 00:39:23,612 - INFO - Iteration 2: Found 48 places
+2026-01-20 00:39:23,612 - INFO - Saved to: Output\restaurants in NYC\response2.json
+2026-01-20 00:39:23,612 - INFO - === Starting iteration 3/10 ===
+2026-01-20 00:43:25,146 - INFO - Iteration 3: Found 48 places
+2026-01-20 00:43:25,147 - INFO - Saved to: Output\restaurants in NYC\response3.json
+2026-01-20 00:43:25,147 - INFO - === Starting iteration 4/10 ===
+2026-01-20 00:46:42,174 - INFO - Iteration 4: Found 47 places
+2026-01-20 00:46:42,174 - INFO - Saved to: Output\restaurants in NYC\response4.json
+2026-01-20 00:46:42,174 - INFO - === Starting iteration 5/10 ===
+2026-01-20 00:52:26,214 - INFO - Iteration 5: Found 68 places
+2026-01-20 00:52:26,214 - INFO - Saved to: Output\restaurants in NYC\response5.json
+2026-01-20 00:52:26,214 - INFO - === Starting iteration 6/10 ===
+2026-01-20 00:56:25,725 - INFO - Iteration 6: Found 49 places
+2026-01-20 00:56:25,725 - INFO - Saved to: Output\restaurants in NYC\response6.json
+2026-01-20 00:56:25,725 - INFO - === Starting iteration 7/10 ===
+2026-01-20 00:59:55,227 - INFO - Iteration 7: Found 50 places
+2026-01-20 00:59:55,227 - INFO - Saved to: Output\restaurants in NYC\response7.json
+2026-01-20 00:59:55,228 - INFO - === Starting iteration 8/10 ===
+2026-01-20 01:03:36,801 - INFO - Iteration 8: Found 50 places
+2026-01-20 01:03:36,801 - INFO - Saved to: Output\restaurants in NYC\response8.json
+2026-01-20 01:03:36,801 - INFO - === Starting iteration 9/10 ===
+2026-01-20 01:07:37,411 - INFO - Iteration 9: Found 51 places
+2026-01-20 01:07:37,412 - INFO - Saved to: Output\restaurants in NYC\response9.json
+2026-01-20 01:07:37,412 - INFO - === Starting iteration 10/10 ===
+2026-01-20 01:10:58,868 - INFO - Iteration 10: Found 49 places
+2026-01-20 01:10:58,868 - INFO - Saved to: Output\restaurants in NYC\response10.json
+2026-01-20 01:10:58,868 - INFO - Creating response_final.json with unique results...
+2026-01-20 01:10:58,870 - INFO - Total places from all iterations: 509
+2026-01-20 01:10:58,870 - INFO - Unique places after deduplication: 85
+2026-01-20 01:10:58,874 - INFO - Final response saved to: Output\restaurants in NYC\response_final.json
+2026-01-20 01:10:58,874 - INFO - === Scraping complete for query: 'restaurants in NYC' ===
+2026-01-20 13:50:45,039 - INFO - Starting 10 scraping iterations for query: 'recruitment in London'
+2026-01-20 13:50:45,040 - INFO - Output directory: Output\recruitment in London
+2026-01-20 13:50:45,040 - INFO - === Starting iteration 1/10 ===
+2026-01-20 13:56:09,974 - INFO - Iteration 1: Found 68 places
+2026-01-20 13:56:09,975 - INFO - Saved to: Output\recruitment in London\response1.json
+2026-01-20 13:56:09,975 - INFO - === Starting iteration 2/10 ===
+2026-01-20 14:00:18,644 - INFO - Iteration 2: Found 67 places
+2026-01-20 14:00:18,644 - INFO - Saved to: Output\recruitment in London\response2.json
+2026-01-20 14:00:18,644 - INFO - === Starting iteration 3/10 ===
+2026-01-20 14:04:41,882 - INFO - Iteration 3: Found 72 places
+2026-01-20 14:04:41,882 - INFO - Saved to: Output\recruitment in London\response3.json
+2026-01-20 14:04:41,882 - INFO - === Starting iteration 4/10 ===
+2026-01-20 14:09:26,051 - INFO - Iteration 4: Found 67 places
+2026-01-20 14:09:26,051 - INFO - Saved to: Output\recruitment in London\response4.json
+2026-01-20 14:09:26,051 - INFO - === Starting iteration 5/10 ===
+2026-01-20 14:13:15,367 - INFO - Iteration 5: Found 49 places
+2026-01-20 14:13:15,367 - INFO - Saved to: Output\recruitment in London\response5.json
+2026-01-20 14:13:15,367 - INFO - === Starting iteration 6/10 ===
+2026-01-20 14:17:51,532 - INFO - Iteration 6: Found 67 places
+2026-01-20 14:17:51,532 - INFO - Saved to: Output\recruitment in London\response6.json
+2026-01-20 14:17:51,532 - INFO - === Starting iteration 7/10 ===
+2026-01-20 14:22:16,927 - INFO - Iteration 7: Found 67 places
+2026-01-20 14:22:16,928 - INFO - Saved to: Output\recruitment in London\response7.json
+2026-01-20 14:22:16,928 - INFO - === Starting iteration 8/10 ===
+2026-01-20 14:27:02,733 - INFO - Iteration 8: Found 67 places
+2026-01-20 14:27:02,734 - INFO - Saved to: Output\recruitment in London\response8.json
+2026-01-20 14:27:02,734 - INFO - === Starting iteration 9/10 ===
+2026-01-20 14:31:46,056 - INFO - Iteration 9: Found 67 places
+2026-01-20 14:31:46,056 - INFO - Saved to: Output\recruitment in London\response9.json
+2026-01-20 14:31:46,057 - INFO - === Starting iteration 10/10 ===
+2026-01-20 14:36:36,382 - INFO - Iteration 10: Found 68 places
+2026-01-20 14:36:36,382 - INFO - Saved to: Output\recruitment in London\response10.json
+2026-01-20 14:36:36,382 - INFO - Creating response_final.json with unique results...
+2026-01-20 14:36:36,382 - INFO - Total places from all iterations: 659
+2026-01-20 14:36:36,383 - INFO - Unique places after deduplication: 87
+2026-01-20 14:36:36,386 - INFO - Final response saved to: Output\recruitment in London\response_final.json
+2026-01-20 14:36:36,386 - INFO - === Scraping complete for query: 'recruitment in London' ===
+2026-01-22 13:24:39,738 - INFO - Starting 10 scraping iterations for query: 'coffee shop in patna'
+2026-01-22 13:24:39,739 - INFO - Output directory: Output\coffee shop in patna
+2026-01-22 13:24:39,739 - INFO - === Starting iteration 1/10 ===
+2026-01-22 13:28:50,709 - INFO - Iteration 1: Found 67 places
+2026-01-22 13:28:50,710 - INFO - Saved to: Output\coffee shop in patna\response1.json
+2026-01-22 13:28:50,710 - INFO - === Starting iteration 2/10 ===
+2026-01-22 13:32:31,147 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C0EA120>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/element
+2026-01-22 13:32:35,162 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C0EB3E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/element
+2026-01-22 13:32:39,174 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C0E9C70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/element
+2026-01-22 13:32:47,199 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C1302F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/url
+2026-01-22 13:32:51,216 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C130530>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/url
+2026-01-22 13:32:55,234 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C130770>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/url
+2026-01-22 13:33:03,275 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026C9C130C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0ad123a568f83c2a74b7666f618691a3/url
+2026-01-22 14:02:33,694 - INFO - Starting 10 scraping iterations for query: 'recruiters in london'
+2026-01-22 14:02:33,695 - INFO - Output directory: Output\recruiters in london
+2026-01-22 14:02:33,695 - INFO - === Starting iteration 1/10 ===
+2026-01-22 14:02:44,913 - INFO - Iteration 1: Found 0 places
+2026-01-22 14:02:44,913 - INFO - Saved to: Output\recruiters in london\response1.json
+2026-01-22 14:02:44,913 - INFO - === Starting iteration 2/10 ===
+2026-01-22 14:03:54,263 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C45AD48B90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/615802adfe7489429816a30d6172ebf7/element
+2026-01-22 14:04:30,607 - INFO - Starting 10 scraping iterations for query: 'Recruiters in bath'
+2026-01-22 14:04:30,609 - INFO - Output directory: Output\Recruiters in bath
+2026-01-22 14:04:30,611 - INFO - === Starting iteration 1/10 ===
+2026-01-22 14:05:27,080 - INFO - Iteration 1: Found 16 places
+2026-01-22 14:05:27,081 - INFO - Saved to: Output\Recruiters in bath\response1.json
+2026-01-22 14:05:27,081 - INFO - === Starting iteration 2/10 ===
+2026-01-22 14:06:30,956 - INFO - Iteration 2: Found 16 places
+2026-01-22 14:06:30,956 - INFO - Saved to: Output\Recruiters in bath\response2.json
+2026-01-22 14:06:30,956 - INFO - === Starting iteration 3/10 ===
+2026-01-22 14:07:29,671 - INFO - Iteration 3: Found 16 places
+2026-01-22 14:07:29,671 - INFO - Saved to: Output\Recruiters in bath\response3.json
+2026-01-22 14:07:29,672 - INFO - === Starting iteration 4/10 ===
+2026-01-22 14:08:21,309 - INFO - Iteration 4: Found 16 places
+2026-01-22 14:08:21,310 - INFO - Saved to: Output\Recruiters in bath\response4.json
+2026-01-22 14:08:21,310 - INFO - === Starting iteration 5/10 ===
+2026-01-22 14:09:20,148 - INFO - Iteration 5: Found 16 places
+2026-01-22 14:09:20,148 - INFO - Saved to: Output\Recruiters in bath\response5.json
+2026-01-22 14:09:20,149 - INFO - === Starting iteration 6/10 ===
+2026-01-22 14:10:11,378 - INFO - Iteration 6: Found 16 places
+2026-01-22 14:10:11,378 - INFO - Saved to: Output\Recruiters in bath\response6.json
+2026-01-22 14:10:11,379 - INFO - === Starting iteration 7/10 ===
+2026-01-22 14:11:17,721 - INFO - Iteration 7: Found 16 places
+2026-01-22 14:11:17,721 - INFO - Saved to: Output\Recruiters in bath\response7.json
+2026-01-22 14:11:17,722 - INFO - === Starting iteration 8/10 ===
+2026-01-22 14:12:17,218 - INFO - Iteration 8: Found 16 places
+2026-01-22 14:12:17,218 - INFO - Saved to: Output\Recruiters in bath\response8.json
+2026-01-22 14:12:17,218 - INFO - === Starting iteration 9/10 ===
+2026-01-22 14:13:13,124 - INFO - Iteration 9: Found 10 places
+2026-01-22 14:13:13,124 - INFO - Saved to: Output\Recruiters in bath\response9.json
+2026-01-22 14:13:13,125 - INFO - === Starting iteration 10/10 ===
+2026-01-22 14:14:15,570 - INFO - Iteration 10: Found 16 places
+2026-01-22 14:14:15,570 - INFO - Saved to: Output\Recruiters in bath\response10.json
+2026-01-22 14:14:15,570 - INFO - Creating response_final.json with unique results...
+2026-01-22 14:14:15,572 - INFO - Total places from all iterations: 154
+2026-01-22 14:14:15,572 - INFO - Unique places after deduplication: 16
+2026-01-22 14:14:15,574 - INFO - Final response saved to: Output\Recruiters in bath\response_final.json
+2026-01-22 14:14:15,574 - INFO - === Scraping complete for query: 'Recruiters in bath' ===
+2026-01-23 11:37:56,437 - INFO - Starting 10 scraping iterations for query: 'Recruiter in bath'
+2026-01-23 11:37:56,438 - INFO - Output directory: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath
+2026-01-23 11:37:56,438 - INFO - === Starting iteration 1/10 ===
+2026-01-23 11:38:56,015 - INFO - Iteration 1: Found 17 places
+2026-01-23 11:38:56,015 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response1.json
+2026-01-23 11:38:56,015 - INFO - === Starting iteration 2/10 ===
+2026-01-23 11:39:49,967 - INFO - Iteration 2: Found 17 places
+2026-01-23 11:39:49,968 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response2.json
+2026-01-23 11:39:49,968 - INFO - === Starting iteration 3/10 ===
+2026-01-23 11:41:23,199 - INFO - Iteration 3: Found 17 places
+2026-01-23 11:41:23,199 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response3.json
+2026-01-23 11:41:23,200 - INFO - === Starting iteration 4/10 ===
+2026-01-23 11:42:45,465 - INFO - Iteration 4: Found 17 places
+2026-01-23 11:42:45,465 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response4.json
+2026-01-23 11:42:45,466 - INFO - === Starting iteration 5/10 ===
+2026-01-23 11:44:12,053 - INFO - Iteration 5: Found 17 places
+2026-01-23 11:44:12,053 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response5.json
+2026-01-23 11:44:12,053 - INFO - === Starting iteration 6/10 ===
+2026-01-23 11:45:30,003 - INFO - Iteration 6: Found 15 places
+2026-01-23 11:45:30,003 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response6.json
+2026-01-23 11:45:30,004 - INFO - === Starting iteration 7/10 ===
+2026-01-23 11:46:45,742 - INFO - Iteration 7: Found 17 places
+2026-01-23 11:46:45,742 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response7.json
+2026-01-23 11:46:45,742 - INFO - === Starting iteration 8/10 ===
+2026-01-23 11:48:02,325 - INFO - Iteration 8: Found 17 places
+2026-01-23 11:48:02,326 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response8.json
+2026-01-23 11:48:02,326 - INFO - === Starting iteration 9/10 ===
+2026-01-23 11:49:10,133 - INFO - Iteration 9: Found 17 places
+2026-01-23 11:49:10,134 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response9.json
+2026-01-23 11:49:10,134 - INFO - === Starting iteration 10/10 ===
+2026-01-23 11:50:03,367 - INFO - Iteration 10: Found 17 places
+2026-01-23 11:50:03,367 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response10.json
+2026-01-23 11:50:03,367 - INFO - Creating response_final.json with unique results...
+2026-01-23 11:50:03,367 - INFO - Total places from all iterations: 168
+2026-01-23 11:50:03,368 - INFO - Unique places after deduplication: 17
+2026-01-23 11:50:03,369 - INFO - Final response saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruiter in bath\response_final.json
+2026-01-23 11:50:03,370 - INFO - === Scraping complete for query: 'Recruiter in bath' ===
+2026-01-23 14:02:10,433 - INFO - Starting 10 scraping iterations for query: 'Recruit, Bristol'
+2026-01-23 14:02:10,435 - INFO - Output directory: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol
+2026-01-23 14:02:10,436 - INFO - === Starting iteration 1/10 ===
+2026-01-23 14:05:35,945 - INFO - Iteration 1: Found 47 places
+2026-01-23 14:05:35,945 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response1.json
+2026-01-23 14:05:35,946 - INFO - === Starting iteration 2/10 ===
+2026-01-23 14:09:07,511 - INFO - Iteration 2: Found 52 places
+2026-01-23 14:09:07,511 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response2.json
+2026-01-23 14:09:07,511 - INFO - === Starting iteration 3/10 ===
+2026-01-23 14:13:24,421 - INFO - Iteration 3: Found 67 places
+2026-01-23 14:13:24,422 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response3.json
+2026-01-23 14:13:24,422 - INFO - === Starting iteration 4/10 ===
+2026-01-23 14:17:39,752 - INFO - Iteration 4: Found 67 places
+2026-01-23 14:17:39,752 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response4.json
+2026-01-23 14:17:39,754 - INFO - === Starting iteration 5/10 ===
+2026-01-23 14:21:58,829 - INFO - Iteration 5: Found 67 places
+2026-01-23 14:21:58,831 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response5.json
+2026-01-23 14:21:58,831 - INFO - === Starting iteration 6/10 ===
+2026-01-23 14:27:09,503 - INFO - Iteration 6: Found 87 places
+2026-01-23 14:27:09,506 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response6.json
+2026-01-23 14:27:09,509 - INFO - === Starting iteration 7/10 ===
+2026-01-23 14:32:10,928 - INFO - Iteration 7: Found 67 places
+2026-01-23 14:32:10,928 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response7.json
+2026-01-23 14:32:10,929 - INFO - === Starting iteration 8/10 ===
+2026-01-23 14:37:20,135 - INFO - Iteration 8: Found 87 places
+2026-01-23 14:37:20,135 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response8.json
+2026-01-23 14:37:20,135 - INFO - === Starting iteration 9/10 ===
+2026-01-23 14:42:25,285 - INFO - Iteration 9: Found 87 places
+2026-01-23 14:42:25,285 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response9.json
+2026-01-23 14:42:25,285 - INFO - === Starting iteration 10/10 ===
+2026-01-23 14:46:51,561 - INFO - Iteration 10: Found 67 places
+2026-01-23 14:46:51,561 - INFO - Saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response10.json
+2026-01-23 14:46:51,562 - INFO - Creating response_final.json with unique results...
+2026-01-23 14:46:51,564 - INFO - Total places from all iterations: 695
+2026-01-23 14:46:51,566 - INFO - Unique places after deduplication: 92
+2026-01-23 14:46:51,570 - INFO - Final response saved to: C:\Users\ROG\Downloads\search-market-google-map-scrapper-main\search-market-google-map-scrapper-main\Output\Recruit_ Bristol\response_final.json
+2026-01-23 14:46:51,570 - INFO - === Scraping complete for query: 'Recruit, Bristol' ===
+2026-02-03 11:52:31,235 - INFO - Starting 10 scraping iterations for query: 'legal in hong kong'
+2026-02-03 11:52:31,236 - INFO - Output directory: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal in hong kong
+2026-02-03 11:52:31,237 - INFO - === Starting iteration 1/10 ===
+2026-02-03 11:53:57,656 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002655E5B1670>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fd015e5ccf841362818203fb65bd6793/element
+2026-02-03 11:54:01,676 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002655E5B30E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fd015e5ccf841362818203fb65bd6793/element
+2026-02-03 11:54:05,693 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002655E5B1FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fd015e5ccf841362818203fb65bd6793/element
+2026-02-03 11:55:14,106 - INFO - Starting 10 scraping iterations for query: 'legal recruiter hong kong'
+2026-02-03 11:55:14,108 - INFO - Output directory: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong
+2026-02-03 11:55:14,108 - INFO - === Starting iteration 1/10 ===
+2026-02-03 11:57:13,160 - INFO - Iteration 1: Found 30 places
+2026-02-03 11:57:13,160 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response1.json
+2026-02-03 11:57:13,160 - INFO - === Starting iteration 2/10 ===
+2026-02-03 11:59:11,847 - INFO - Iteration 2: Found 29 places
+2026-02-03 11:59:11,848 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response2.json
+2026-02-03 11:59:11,848 - INFO - === Starting iteration 3/10 ===
+2026-02-03 12:01:26,565 - INFO - Iteration 3: Found 30 places
+2026-02-03 12:01:26,565 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response3.json
+2026-02-03 12:01:26,565 - INFO - === Starting iteration 4/10 ===
+2026-02-03 12:02:51,254 - INFO - Iteration 4: Found 20 places
+2026-02-03 12:02:51,255 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response4.json
+2026-02-03 12:02:51,255 - INFO - === Starting iteration 5/10 ===
+2026-02-03 12:04:52,069 - INFO - Iteration 5: Found 30 places
+2026-02-03 12:04:52,070 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response5.json
+2026-02-03 12:04:52,070 - INFO - === Starting iteration 6/10 ===
+2026-02-03 12:07:05,371 - INFO - Iteration 6: Found 30 places
+2026-02-03 12:07:05,372 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response6.json
+2026-02-03 12:07:05,372 - INFO - === Starting iteration 7/10 ===
+2026-02-03 12:09:03,015 - INFO - Iteration 7: Found 29 places
+2026-02-03 12:09:03,015 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response7.json
+2026-02-03 12:09:03,015 - INFO - === Starting iteration 8/10 ===
+2026-02-03 12:10:06,224 - INFO - Iteration 8: Found 20 places
+2026-02-03 12:10:06,225 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response8.json
+2026-02-03 12:10:06,225 - INFO - === Starting iteration 9/10 ===
+2026-02-03 12:11:33,084 - INFO - Iteration 9: Found 30 places
+2026-02-03 12:11:33,085 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response9.json
+2026-02-03 12:11:33,085 - INFO - === Starting iteration 10/10 ===
+2026-02-03 12:13:00,183 - INFO - Iteration 10: Found 29 places
+2026-02-03 12:13:00,184 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response10.json
+2026-02-03 12:13:00,184 - INFO - Creating response_final.json with unique results...
+2026-02-03 12:13:00,184 - INFO - Total places from all iterations: 277
+2026-02-03 12:13:00,184 - INFO - Unique places after deduplication: 30
+2026-02-03 12:13:00,186 - INFO - Final response saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\legal recruiter hong kong\response_final.json
+2026-02-03 12:13:00,186 - INFO - === Scraping complete for query: 'legal recruiter hong kong' ===
+2026-02-06 11:02:42,745 - INFO - Starting 10 scraping iterations for query: 'Recruiter in Southend-on-Sea, England'
+2026-02-06 11:02:42,746 - INFO - Output directory: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England
+2026-02-06 11:02:42,755 - INFO - === Starting iteration 1/10 ===
+2026-02-06 11:05:06,449 - INFO - Iteration 1: Found 51 places
+2026-02-06 11:05:06,449 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response1.json
+2026-02-06 11:05:06,450 - INFO - === Starting iteration 2/10 ===
+2026-02-06 11:07:29,069 - INFO - Iteration 2: Found 52 places
+2026-02-06 11:07:29,069 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response2.json
+2026-02-06 11:07:29,069 - INFO - === Starting iteration 3/10 ===
+2026-02-06 11:09:48,666 - INFO - Iteration 3: Found 51 places
+2026-02-06 11:09:48,667 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response3.json
+2026-02-06 11:09:48,667 - INFO - === Starting iteration 4/10 ===
+2026-02-06 11:11:59,354 - INFO - Iteration 4: Found 47 places
+2026-02-06 11:11:59,356 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response4.json
+2026-02-06 11:11:59,356 - INFO - === Starting iteration 5/10 ===
+2026-02-06 11:14:27,726 - INFO - Iteration 5: Found 51 places
+2026-02-06 11:14:27,726 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response5.json
+2026-02-06 11:14:27,726 - INFO - === Starting iteration 6/10 ===
+2026-02-06 11:16:50,955 - INFO - Iteration 6: Found 51 places
+2026-02-06 11:16:50,956 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response6.json
+2026-02-06 11:16:50,956 - INFO - === Starting iteration 7/10 ===
+2026-02-06 11:19:11,099 - INFO - Iteration 7: Found 51 places
+2026-02-06 11:19:11,099 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response7.json
+2026-02-06 11:19:11,099 - INFO - === Starting iteration 8/10 ===
+2026-02-06 11:21:40,151 - INFO - Iteration 8: Found 51 places
+2026-02-06 11:21:40,151 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response8.json
+2026-02-06 11:21:40,151 - INFO - === Starting iteration 9/10 ===
+2026-02-06 11:24:03,921 - INFO - Iteration 9: Found 52 places
+2026-02-06 11:24:03,922 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response9.json
+2026-02-06 11:24:03,922 - INFO - === Starting iteration 10/10 ===
+2026-02-06 11:32:14,419 - INFO - Iteration 10: Found 0 places
+2026-02-06 11:32:14,422 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response10.json
+2026-02-06 11:32:14,440 - INFO - Creating response_final.json with unique results...
+2026-02-06 11:32:14,442 - INFO - Total places from all iterations: 457
+2026-02-06 11:32:14,460 - INFO - Unique places after deduplication: 52
+2026-02-06 11:32:14,472 - INFO - Final response saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend-on-Sea_ England\response_final.json
+2026-02-06 11:32:14,483 - INFO - === Scraping complete for query: 'Recruiter in Southend-on-Sea, England' ===
+2026-02-06 11:32:14,497 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\ROG\anaconda3\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ROG\anaconda3\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-02-06 13:20:43,304 - INFO - Starting 10 scraping iterations for query: 'Recruiter in Southend on Sea England'
+2026-02-06 13:20:43,304 - INFO - Output directory: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England
+2026-02-06 13:20:43,305 - INFO - === Starting iteration 1/10 ===
+2026-02-06 13:28:21,125 - INFO - Iteration 1: Found 50 places
+2026-02-06 13:28:21,125 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response1.json
+2026-02-06 13:28:21,126 - INFO - === Starting iteration 2/10 ===
+2026-02-06 13:36:32,449 - INFO - Iteration 2: Found 53 places
+2026-02-06 13:36:32,450 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response2.json
+2026-02-06 13:36:32,450 - INFO - === Starting iteration 3/10 ===
+2026-02-06 13:44:21,249 - INFO - Iteration 3: Found 53 places
+2026-02-06 13:44:21,250 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response3.json
+2026-02-06 13:44:21,250 - INFO - === Starting iteration 4/10 ===
+2026-02-06 13:52:04,875 - INFO - Iteration 4: Found 50 places
+2026-02-06 13:52:04,875 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response4.json
+2026-02-06 13:52:04,876 - INFO - === Starting iteration 5/10 ===
+2026-02-06 14:02:58,876 - INFO - Iteration 5: Found 53 places
+2026-02-06 14:02:58,876 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response5.json
+2026-02-06 14:02:58,876 - INFO - === Starting iteration 6/10 ===
+2026-02-06 14:10:27,495 - INFO - Iteration 6: Found 52 places
+2026-02-06 14:10:27,496 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response6.json
+2026-02-06 14:10:27,496 - INFO - === Starting iteration 7/10 ===
+2026-02-06 14:17:46,756 - INFO - Iteration 7: Found 50 places
+2026-02-06 14:17:46,756 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response7.json
+2026-02-06 14:17:46,757 - INFO - === Starting iteration 8/10 ===
+2026-02-06 14:25:56,072 - INFO - Iteration 8: Found 50 places
+2026-02-06 14:25:56,072 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response8.json
+2026-02-06 14:25:56,073 - INFO - === Starting iteration 9/10 ===
+2026-02-06 14:33:22,672 - INFO - Iteration 9: Found 50 places
+2026-02-06 14:33:22,672 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response9.json
+2026-02-06 14:33:22,672 - INFO - === Starting iteration 10/10 ===
+2026-02-06 14:42:26,999 - INFO - Iteration 10: Found 52 places
+2026-02-06 14:42:26,999 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response10.json
+2026-02-06 14:42:26,999 - INFO - Creating response_final.json with unique results...
+2026-02-06 14:42:27,000 - INFO - Total places from all iterations: 513
+2026-02-06 14:42:27,000 - INFO - Unique places after deduplication: 53
+2026-02-06 14:42:27,005 - INFO - Final response saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response_final.json
+2026-02-06 14:42:27,005 - INFO - === Scraping complete for query: 'Recruiter in Southend on Sea England' ===
+2026-02-16 19:35:41,125 - INFO - Starting 10 scraping iterations for query: 'Recruiter in Southend on Sea England'
+2026-02-16 19:35:41,126 - INFO - Output directory: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England
+2026-02-16 19:35:41,126 - INFO - === Starting iteration 1/10 ===
+2026-02-16 19:42:24,892 - INFO - Iteration 1: Found 45 places
+2026-02-16 19:42:24,893 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response1.json
+2026-02-16 19:42:24,893 - INFO - === Starting iteration 2/10 ===
+2026-02-16 19:48:32,222 - INFO - Iteration 2: Found 45 places
+2026-02-16 19:48:32,223 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response2.json
+2026-02-16 19:48:32,223 - INFO - === Starting iteration 3/10 ===
+2026-02-16 19:54:52,812 - INFO - Iteration 3: Found 45 places
+2026-02-16 19:54:52,813 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response3.json
+2026-02-16 19:54:52,813 - INFO - === Starting iteration 4/10 ===
+2026-02-16 20:01:08,295 - INFO - Iteration 4: Found 45 places
+2026-02-16 20:01:08,296 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response4.json
+2026-02-16 20:01:08,296 - INFO - === Starting iteration 5/10 ===
+2026-02-16 20:07:46,096 - INFO - Iteration 5: Found 45 places
+2026-02-16 20:07:46,097 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response5.json
+2026-02-16 20:07:46,097 - INFO - === Starting iteration 6/10 ===
+2026-02-16 20:14:55,729 - INFO - Iteration 6: Found 45 places
+2026-02-16 20:14:55,730 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response6.json
+2026-02-16 20:14:55,730 - INFO - === Starting iteration 7/10 ===
+2026-02-16 20:28:18,587 - INFO - Iteration 7: Found 5 places
+2026-02-16 20:28:18,589 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response7.json
+2026-02-16 20:28:18,593 - INFO - === Starting iteration 8/10 ===
+2026-02-16 20:36:45,870 - INFO - Iteration 8: Found 49 places
+2026-02-16 20:36:45,870 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response8.json
+2026-02-16 20:36:45,870 - INFO - === Starting iteration 9/10 ===
+2026-02-16 20:45:23,150 - INFO - Iteration 9: Found 54 places
+2026-02-16 20:45:23,150 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response9.json
+2026-02-16 20:45:23,151 - INFO - === Starting iteration 10/10 ===
+2026-02-16 20:51:57,454 - INFO - Iteration 10: Found 44 places
+2026-02-16 20:51:57,455 - INFO - Saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response10.json
+2026-02-16 20:51:57,456 - INFO - Creating response_final.json with unique results...
+2026-02-16 20:51:57,462 - INFO - Total places from all iterations: 422
+2026-02-16 20:51:57,471 - INFO - Unique places after deduplication: 55
+2026-02-16 20:51:57,483 - INFO - Final response saved to: C:\Users\ROG\Desktop\Search Markets Google Scraper\Output\Recruiter in Southend on Sea England\response_final.json
+2026-02-16 20:51:57,485 - INFO - === Scraping complete for query: 'Recruiter in Southend on Sea England' ===

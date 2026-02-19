@@ -1,0 +1,7 @@
+python server.py
+
+# UI (browser)
+http://localhost:3000
+
+# API (CLI)
+curl "http://localhost:3000/api/scrape?query=restaurants+in+Jalandhar"

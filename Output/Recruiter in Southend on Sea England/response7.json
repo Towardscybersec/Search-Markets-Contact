@@ -1,0 +1,81 @@
+{
+    "query": "Recruiter in Southend on Sea England",
+    "total_results": 5,
+    "places": [
+        {
+            "title": "Reed Recruitment Agency",
+            "rating": 4.9,
+            "reviews_count": null,
+            "category": "Employment agency",
+            "address": "3rd Floor, Tyler's House, Tylers Ave, Southend-on-Sea SS1 2BB, United Kingdom",
+            "phone": "+44 1702 444393",
+            "website": "https://www.google.com/url?q=https://www.reed.com/offices/reed-recruitment-southend-on-sea%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dgbpwebsite-reed-recruitment-southend-on-sea&opi=79508299&sa=U&ved=0ahUKEwii_5eEoN6SAxUqSGcHHSTXMkcQ61gIFigS&usg=AOvVaw0TOb9cqV3HD-nKd96bBf7M",
+            "socials": {
+                "facebook": "https://www.facebook.com/reedspecialistrecruitment",
+                "instagram": null,
+                "twitter": "https://twitter.com/reedglobal",
+                "linkedin": "https://www.linkedin.com/company/reed"
+            }
+        },
+        {
+            "title": "Jonathan Rhys Recruitment Ltd",
+            "rating": 4.8,
+            "reviews_count": null,
+            "category": "Recruiter",
+            "address": "Cohav House, Aviation Way, Southend-on-Sea SS2 6UN, United Kingdom",
+            "phone": "+44 1268 646459",
+            "website": "https://www.google.com/url?q=https://www.jonathan-rhys.com/&opi=79508299&sa=U&ved=0ahUKEwi4w96VoN6SAxV-T2cHHdDYINEQ61gIFigS&usg=AOvVaw3OjdTlU-h0-qhkObtUJJYy",
+            "socials": {
+                "facebook": "https://www.facebook.com/JonathanRhysRecruitment",
+                "instagram": "https://www.instagram.com/jonathanrhysrecruitment",
+                "twitter": null,
+                "linkedin": null
+            }
+        },
+        {
+            "title": "One to One Personnel",
+            "rating": 4.8,
+            "reviews_count": null,
+            "category": "Recruiter",
+            "address": "221 Leigh Rd, Southend-on-Sea, Leigh-on-Sea SS9 1JA, United Kingdom",
+            "phone": "+44 1702 464444",
+            "website": "https://www.google.com/url?q=http://www.onetoonepersonnel.co.uk/&opi=79508299&sa=U&ved=0ahUKEwiDm_KZoN6SAxXTUGwGHVjwOykQ61gIFigS&usg=AOvVaw0OtQ2H1SDbmqLycdByAzoI",
+            "socials": {
+                "facebook": "https://www.facebook.com/121Personnel",
+                "instagram": null,
+                "twitter": "https://twitter.com/121personnel",
+                "linkedin": "https://www.linkedin.com/company/455478"
+            }
+        },
+        {
+            "title": "Kenect Recruitment Agency - Southend",
+            "rating": 4.9,
+            "reviews_count": null,
+            "category": "Recruiter",
+            "address": "Suite 2, 9 Purdeys Way, Rochford SS4 1ND, United Kingdom",
+            "phone": "+44 1702 667297",
+            "website": "https://www.google.com/url?q=http://www.kenectrecruitment.co.uk/&opi=79508299&sa=U&ved=0ahUKEwjBldadoN6SAxXVUGcHHZ68KQYQ61gIFigS&usg=AOvVaw0qdVb_lKIFcdhoL7Mv95Hg",
+            "socials": {
+                "facebook": "https://www.facebook.com/kenectrecruit",
+                "instagram": "https://www.instagram.com/kenectrecruitment",
+                "twitter": "https://www.twitter.com/kenectrecruit",
+                "linkedin": "https://www.linkedin.com/company/kenect-recruitment-ltd"
+            }
+        },
+        {
+            "title": "ENS Recruitment Ltd",
+            "rating": 3.9,
+            "reviews_count": null,
+            "category": "Employment agency",
+            "address": "22-24 Hamlet Ct Rd, Westcliff-on-Sea, Southend-on-Sea, Westcliff-on-Sea SS0 7LX, United Kingdom",
+            "phone": "+44 1702 353100",
+            "website": "https://www.google.com/url?q=https://www.ensrecruitment.co.uk/&opi=79508299&sa=U&ved=0ahUKEwjhs8OhoN6SAxV-XGwGHYKPO5QQ61gIFigS&usg=AOvVaw1txTrlKGxs40NPdX1_NigU",
+            "socials": {
+                "facebook": "https://www.facebook.com/ens.recruitmentltd",
+                "instagram": "https://www.instagram.com/ens_recruitment",
+                "twitter": "https://twitter.com/ENS_Recruitment",
+                "linkedin": "https://www.linkedin.com/company/ens-recruitment"
+            }
+        }
+    ]
+}

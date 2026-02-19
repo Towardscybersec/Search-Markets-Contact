@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <h1>Reset your password</h1>
+  <p>Enter the email address tied to your account.</p>
+</header>
+
+<section class="card auth-card">
+  <div class="card-title">Request a reset link</div>
+  <div class="card-subtitle">We will email you a secure reset link.</div>
+
+  {% if error %}
+  <div class="alert error">{{ error }}</div>
+  {% endif %}
+  {% if message %}
+  <div class="alert success">{{ message }}</div>
+  {% endif %}
+
+  <form method="post" action="/reset" class="auth-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required />
+    </div>
+    <button type="submit">Send reset link</button>
+  </form>
+
+  {% if reset_link %}
+  <div class="helper">Dev link: <code>{{ reset_link }}</code></div>
+  {% endif %}
+
+  <div class="auth-links">
+    <a href="/">Back to sign in</a>
+  </div>
+</section>
+{% endblock %}

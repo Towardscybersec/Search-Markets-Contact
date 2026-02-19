@@ -1,0 +1,429 @@
+{
+    "query": "restaurants in NYC",
+    "total_results": 47,
+    "places": [
+        {
+            "title": "Gramercy Tavern",
+            "rating": 4.6,
+            "reviews_count": 4755,
+            "category": "New American restaurant",
+            "address": "42 E 20th St, New York, NY 10003, United States",
+            "phone": "+1 212-477-0777",
+            "website": "https://www.google.com/url?q=https://www.gramercytavern.com/&opi=79508299&sa=U&ved=0ahUKEwj2nvSGqJiSAxX7xjgGHS_nAmIQ61gIGCgQ&usg=AOvVaw0nNwZn81E9VEUgicWO7XFi"
+        },
+        {
+            "title": "Manhatta",
+            "rating": 4.7,
+            "reviews_count": 3483,
+            "category": "New American restaurant",
+            "address": "28 Liberty St 60th floor, New York, NY 10005, United States",
+            "phone": "+1 212-230-5788",
+            "website": "https://www.google.com/url?q=https://www.manhattarestaurant.com/&opi=79508299&sa=U&ved=0ahUKEwiQuPWIqJiSAxUtyDgGHdKXClwQ61gIGCgQ&usg=AOvVaw28_k1RbSEiMHb5JJZnfWqv"
+        },
+        {
+            "title": "Au Cheval",
+            "rating": 4.7,
+            "reviews_count": 5516,
+            "category": "New American restaurant",
+            "address": "33 Cortlandt Alley, New York, NY 10013, United States",
+            "phone": "+1 646-350-2429",
+            "website": "https://www.google.com/url?q=https://www.auchevaldiner.com/nyc/home&opi=79508299&sa=U&ved=0ahUKEwjKyJuKqJiSAxWa2DgGHZ-wBggQ61gIGSgQ&usg=AOvVaw1kO6yC1NJE8SHV_uX4Fwwq"
+        },
+        {
+            "title": "Shukette",
+            "rating": 4.8,
+            "reviews_count": 3024,
+            "category": "Middle Eastern restaurant",
+            "address": "230 9th Ave, New York, NY 10001, United States",
+            "phone": "+1 212-242-1803",
+            "website": "https://www.google.com/url?q=http://www.shukettenyc.com/&opi=79508299&sa=U&ved=0ahUKEwj73LKLqJiSAxUDimMGHcekOWMQ61gIGCgQ&usg=AOvVaw2UA1rLaEzfk1vG8XvNpfCe"
+        },
+        {
+            "title": "Carmine's - Time Square",
+            "rating": 4.5,
+            "reviews_count": 18384,
+            "category": "Italian restaurant",
+            "address": "200 W 44th St, New York, NY 10036, United States",
+            "phone": "+1 212-221-3800",
+            "website": "https://www.google.com/url?q=https://carminesnyc.com/locations/times-square&opi=79508299&sa=U&ved=0ahUKEwjdxMmMqJiSAxXt9zgGHdnhJW0Q61gIFSgQ&usg=AOvVaw0TJc7KZnUkIan4nCjmEysM"
+        },
+        {
+            "title": "Eataly",
+            "rating": 4.2,
+            "reviews_count": 6211,
+            "category": "Italian restaurant",
+            "address": "101 Liberty St, New York, NY 10007, United States",
+            "phone": "+1 212-897-2895",
+            "website": "https://www.google.com/url?q=https://www.eataly.com/us_en/stores/nyc-downtown/restaurants&opi=79508299&sa=U&ved=0ahUKEwiF0N6NqJiSAxXYwzgGHUCTLxQQ61gIFSgQ&usg=AOvVaw25lykdA-qO7HVFLnct8g8o"
+        },
+        {
+            "title": "Via Carota",
+            "rating": 4.4,
+            "reviews_count": 3148,
+            "category": "Italian restaurant",
+            "address": "51 Grove St, New York, NY 10014, United States",
+            "phone": null,
+            "website": "https://www.google.com/url?q=http://viacarota.com/&opi=79508299&sa=U&ved=0ahUKEwiG9PSOqJiSAxVF2DgGHd0YFooQ61gIFCgM&usg=AOvVaw3Q3ZpYFppJbYWKiua4vIWh"
+        },
+        {
+            "title": "The Landing",
+            "rating": 4.6,
+            "reviews_count": 247,
+            "category": "Restaurant",
+            "address": "1 Pennsylvania Plaza, New York, NY 10119, United States",
+            "phone": "+1 917-764-3463",
+            "website": "https://www.google.com/url?q=https://www.thelanding.nyc/%3Fy_source%3D1_MzI0ODA0MDMtNzE1LWxvY2F0aW9uLndlYnNpdGU%253D&opi=79508299&sa=U&ved=0ahUKEwjbmpKQqJiSAxW08qACHckNGisQ61gIGCgQ&usg=AOvVaw28Q0rV9Ftsghz_HJkDpRs3"
+        },
+        {
+            "title": "1803 NYC",
+            "rating": 4.5,
+            "reviews_count": 2015,
+            "category": "Cajun restaurant",
+            "address": "82 Reade St, New York, NY 10007, United States",
+            "phone": "+1 212-267-3000",
+            "website": "https://www.google.com/url?q=https://1803nyc.com/&opi=79508299&sa=U&ved=0ahUKEwj2iKqRqJiSAxU08zgGHeScOawQ61gIGSgQ&usg=AOvVaw3xbBBC9LxYhxWG1McHiGt3"
+        },
+        {
+            "title": "Piccola Cucina Osteria Siciliana",
+            "rating": 4.6,
+            "reviews_count": 2456,
+            "category": "Italian restaurant",
+            "address": "196 Spring St, New York, NY 10012, United States",
+            "phone": "+1 646-478-7488",
+            "website": "https://www.google.com/url?q=http://www.piccolacucinagroup.com/&opi=79508299&sa=U&ved=0ahUKEwi618OSqJiSAxVdxjgGHedWLBIQ61gIGSgQ&usg=AOvVaw1HGLAvFOVNW0xuaHxElIME"
+        },
+        {
+            "title": "Altair Restaurant NYC",
+            "rating": 4.8,
+            "reviews_count": 709,
+            "category": "New American restaurant",
+            "address": "351 W 38th St, New York, NY 10018, United States",
+            "phone": "+1 929-561-6131",
+            "website": "https://www.google.com/url?q=https://www.altairnyc.com/&opi=79508299&sa=U&ved=0ahUKEwif4deTqJiSAxU_2TgGHTYqDmgQ61gIGigQ&usg=AOvVaw1nXxwjFvf3WO2awGnSKy29"
+        },
+        {
+            "title": "LOS TACOS No.1",
+            "rating": 4.7,
+            "reviews_count": 5165,
+            "category": "Taco restaurant",
+            "address": "75 9th Ave, New York, NY 10011, United States",
+            "phone": null,
+            "website": "https://www.google.com/url?q=https://www.lostacos1.com/&opi=79508299&sa=U&ved=0ahUKEwiX6OmUqJiSAxW1yTgGHagJDXUQ61gIFCgM&usg=AOvVaw10nK9yjpcOH20OxKgQPHAT"
+        },
+        {
+            "title": "Chambers",
+            "rating": 4.7,
+            "reviews_count": 328,
+            "category": "New American restaurant",
+            "address": "94 Chambers St #1, New York, NY 10007, United States",
+            "phone": "+1 212-580-3572",
+            "website": "https://www.google.com/url?q=http://chambers.nyc/&opi=79508299&sa=U&ved=0ahUKEwiPvP-VqJiSAxUSi2MGHbehAQUQ61gIGCgQ&usg=AOvVaw0V7CWTFKs4_EVSSf1wHjf7"
+        },
+        {
+            "title": "O'Hara's Restaurant and Pub",
+            "rating": 4.6,
+            "reviews_count": 5592,
+            "category": "American restaurant",
+            "address": "120 Cedar St, New York, NY 10006, United States",
+            "phone": "+1 212-267-3032",
+            "website": "https://www.google.com/url?q=https://oharasrestaurantandpub.site/&opi=79508299&sa=U&ved=0ahUKEwjL_5GXqJiSAxVcyzgGHUZoM0UQ61gIGSgQ&usg=AOvVaw3NKNro4OqiLUDlSE6UK7Wz"
+        },
+        {
+            "title": "Buena Vista Restaurant & Bar",
+            "rating": 4.7,
+            "reviews_count": 1338,
+            "category": "Restaurant",
+            "address": "536 9th Ave, New York, NY 10018, United States",
+            "phone": "+1 212-388-5040",
+            "website": "https://www.google.com/url?q=http://www.buenavistahellskitchen.com/%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dgbp-listing&opi=79508299&sa=U&ved=0ahUKEwi-6aSYqJiSAxUXxjgGHd7BFsQQ61gIGSgQ&usg=AOvVaw2p4xKOrSARS4k9iOlzIQi7"
+        },
+        {
+            "title": "Bubby's",
+            "rating": 4.4,
+            "reviews_count": 8247,
+            "category": "American restaurant",
+            "address": "120 Hudson St, New York, NY 10013, United States",
+            "phone": "+1 212-219-0666",
+            "website": "https://www.google.com/url?q=https://www.bubbys.com/&opi=79508299&sa=U&ved=0ahUKEwixhLmZqJiSAxWV1TgGHX3UA7EQ61gIGSgQ&usg=AOvVaw1M92kCnxT1O93Ae037wE3w"
+        },
+        {
+            "title": "Lindens",
+            "rating": 4.8,
+            "reviews_count": 876,
+            "category": "American restaurant",
+            "address": "2 Renwick St, New York, NY 10013, United States",
+            "phone": "+1 929-595-7706",
+            "website": "https://www.google.com/url?q=http://www.lindensnyc.com/&opi=79508299&sa=U&ved=0ahUKEwi4t8-aqJiSAxVl7jgGHbk6HcgQ61gIGSgQ&usg=AOvVaw3V9qyebC4NY8HfazgCWeJx"
+        },
+        {
+            "title": "Kochi - Korean Fine Dining",
+            "rating": 4.6,
+            "reviews_count": 955,
+            "category": "Fine dining restaurant",
+            "address": "652 10th Ave, New York, NY 10036, United States",
+            "phone": "+1 646-478-7308",
+            "website": "https://www.google.com/url?q=http://kochinyc.com/&opi=79508299&sa=U&ved=0ahUKEwi3pOObqJiSAxU4wzgGHSTTKrgQ61gIGCgQ&usg=AOvVaw2NkJrB7AnEyote4UBuGkD7"
+        },
+        {
+            "title": "Jiang Nan NYC",
+            "rating": 4.8,
+            "reviews_count": 1621,
+            "category": "Chinese restaurant",
+            "address": "103 Bowery, New York, NY 10002, United States",
+            "phone": "+1 212-775-8998",
+            "website": "https://www.google.com/url?q=https://jiangnanny.com/&opi=79508299&sa=U&ved=0ahUKEwj3r_qcqJiSAxWfyDgGHSa1OHwQ61gIGSgQ&usg=AOvVaw2184_qo_0P_6dTx_25CobW"
+        },
+        {
+            "title": "Lulla NYC",
+            "rating": 4.7,
+            "reviews_count": 535,
+            "category": "Restaurant",
+            "address": "113 W 24th St, New York, NY 10011, United States",
+            "phone": "+1 929-588-8556",
+            "website": "https://www.google.com/url?q=http://www.lullanyc.com/&opi=79508299&sa=U&ved=0ahUKEwi59Y-eqJiSAxWZ2TgGHR1vK9cQ61gIFCgQ&usg=AOvVaw3GB96IpKcY9ufpK_S6lQ0l"
+        },
+        {
+            "title": "Torrisi",
+            "rating": 4.6,
+            "reviews_count": 841,
+            "category": "Italian restaurant",
+            "address": "275 Mulberry St, New York, NY 10012, United States",
+            "phone": "+1 212-254-3000",
+            "website": "https://www.google.com/url?q=https://www.torrisinyc.com/%3Futm_medium%3DClick%26utm_source%3DGoogleMyBusiness&opi=79508299&sa=U&ved=0ahUKEwjtgKKfqJiSAxVhnGMGHWqpHoIQ61gIGCgQ&usg=AOvVaw2bO0Ut35OKwyduxbI2MhXB"
+        },
+        {
+            "title": "Tucci New York City",
+            "rating": 4.3,
+            "reviews_count": 289,
+            "category": "Italian restaurant",
+            "address": "643 Broadway, New York, NY 10012, United States",
+            "phone": "+1 917-831-1401",
+            "website": "https://www.google.com/url?q=https://www.tuccinyc.com/&opi=79508299&sa=U&ved=0ahUKEwizvbagqJiSAxXOzjgGHco8OZ4Q61gIGCgQ&usg=AOvVaw1FiYsjn6wifTreIDSFPPoB"
+        },
+        {
+            "title": "Buddakan",
+            "rating": 4.4,
+            "reviews_count": 5671,
+            "category": "Restaurant",
+            "address": "75 9th Ave, New York, NY 10011, United States",
+            "phone": "+1 212-989-6699",
+            "website": "https://www.google.com/url?q=https://www.buddakannyc.com/%3Futm_source%3DGoogleBusinessProfile%26utm_medium%3DWebsite%26utm_campaign%3DMapLabs&opi=79508299&sa=U&ved=0ahUKEwinysmhqJiSAxWVumMGHcoKBOIQ61gIGCgQ&usg=AOvVaw2DC7B4YnD57HSmRMN9mCxf"
+        },
+        {
+            "title": "Jose Luis Mediterranean Cuisine",
+            "rating": 4.8,
+            "reviews_count": 685,
+            "category": "Mediterranean restaurant",
+            "address": "186 Avenue B, New York, NY 10009, United States",
+            "phone": "+1 646-707-0746",
+            "website": "https://www.google.com/url?q=http://joseluisnewyork.com/&opi=79508299&sa=U&ved=0ahUKEwjz9uaiqJiSAxWvumMGHVIpI38Q61gIGSgQ&usg=AOvVaw1h2MraZufS9ZhJv_GqfI_n"
+        },
+        {
+            "title": "La Mercerie",
+            "rating": 4.3,
+            "reviews_count": 1703,
+            "category": "Restaurant",
+            "address": "53 Howard St, New York, NY 10013, United States",
+            "phone": "+1 212-852-9097",
+            "website": "https://www.google.com/url?q=https://www.lamercerieny.com/%3Futm_source%3DGoogleBusinessProfile%26utm_medium%3DWebsite%26utm_campaign%3DMapLabs&opi=79508299&sa=U&ved=0ahUKEwjZz_-jqJiSAxXqzjgGHTS8D7QQ61gIGCgQ&usg=AOvVaw0KFfMMNz_MuW33C7R2sMkI"
+        },
+        {
+            "title": "Hole In The Wall - FiDi",
+            "rating": 4.8,
+            "reviews_count": 3643,
+            "category": "Australian restaurant",
+            "address": "15 Cliff St, New York, NY 10038, United States",
+            "phone": "+1 212-602-9991",
+            "website": "https://www.google.com/url?q=http://www.holeinthewallnyc.com/fidi&opi=79508299&sa=U&ved=0ahUKEwj2wpalqJiSAxXAxjgGHdpREHUQ61gIGSgQ&usg=AOvVaw0Ra_btGHXnep0Eg61l_SfR"
+        },
+        {
+            "title": "Salinas Restaurant",
+            "rating": 4.7,
+            "reviews_count": 2524,
+            "category": "Spanish restaurant",
+            "address": "136 9th Ave, New York, NY 10011, United States",
+            "phone": "+1 212-776-1990",
+            "website": "https://www.google.com/url?q=http://www.salinasnyc.com/&opi=79508299&sa=U&ved=0ahUKEwjIgLqmqJiSAxX08TgGHSD2A54Q61gIGCgQ&usg=AOvVaw1IHjcO5UzRQxF7fsKbi2lA"
+        },
+        {
+            "title": "The Odeon",
+            "rating": 4.5,
+            "reviews_count": 2031,
+            "category": "Modern French restaurant",
+            "address": "145 W Broadway, New York, NY 10013, United States",
+            "phone": "+1 212-233-0507",
+            "website": "https://www.google.com/url?q=http://www.theodeonrestaurant.com/&opi=79508299&sa=U&ved=0ahUKEwjhjMynqJiSAxWO3TgGHcmZHx0Q61gIGSgQ&usg=AOvVaw0qZ5m3u9sM0p0zToSgxhjl"
+        },
+        {
+            "title": "Keens Steakhouse",
+            "rating": 4.6,
+            "reviews_count": 9480,
+            "category": "Steak house",
+            "address": "72 W 36th St., New York, NY 10018, United States",
+            "phone": "+1 212-947-3636",
+            "website": "https://www.google.com/url?q=http://www.keens.com/&opi=79508299&sa=U&ved=0ahUKEwjRjuOoqJiSAxW54TgGHcMoMrsQ61gIGCgQ&usg=AOvVaw3xTpo1uN20yGRkoLdiNCTB"
+        },
+        {
+            "title": "Raoul's",
+            "rating": 4.4,
+            "reviews_count": 1326,
+            "category": "French restaurant",
+            "address": "180 Prince St, New York, NY 10012, United States",
+            "phone": "+1 212-966-3518",
+            "website": "https://www.google.com/url?q=http://raouls.com/&opi=79508299&sa=U&ved=0ahUKEwiBtvipqJiSAxWVxjgGHQbAAcMQ61gIGCgQ&usg=AOvVaw0ZLvfOSVQXSoYN12_M9ibK"
+        },
+        {
+            "title": "Le Bernardin",
+            "rating": 4.6,
+            "reviews_count": 4015,
+            "category": "French restaurant",
+            "address": "155 W 51st St, New York, NY 10019, United States",
+            "phone": "+1 212-554-1515",
+            "website": "https://www.google.com/url?q=https://www.le-bernardin.com/home&opi=79508299&sa=U&ved=0ahUKEwj18YmrqJiSAxWuxzgGHeXgMWQQ61gIGCgQ&usg=AOvVaw0Y1eWwgPy9MDIVVTmyu_ie"
+        },
+        {
+            "title": "Hearth",
+            "rating": 4.5,
+            "reviews_count": 979,
+            "category": "Fine dining restaurant",
+            "address": "403 E 12th St, New York, NY 10009, United States",
+            "phone": "+1 646-602-1300",
+            "website": "https://www.google.com/url?q=https://www.restauranthearth.com/%3Futm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_campaign%3Dgbp-website-link&opi=79508299&sa=U&ved=0ahUKEwjU9aasqJiSAxVzwjgGHWkdLSYQ61gIGSgQ&usg=AOvVaw30y5s-UcKDojExdi_0tqtF"
+        },
+        {
+            "title": "Toro Loco",
+            "rating": 4.5,
+            "reviews_count": 2235,
+            "category": "Mexican restaurant",
+            "address": "15 Stone St, New York, NY 10004, United States",
+            "phone": "+1 917-262-0444",
+            "website": "https://www.google.com/url?q=https://www.toroloconyc.com/&opi=79508299&sa=U&ved=0ahUKEwjTo7utqJiSAxXG1zgGHa18ChoQ61gIGSgQ&usg=AOvVaw2lbHvjw5OCK2fsD-WjeXbD"
+        },
+        {
+            "title": "Imm Thai NYC",
+            "rating": 4.5,
+            "reviews_count": 644,
+            "category": "Thai restaurant",
+            "address": "80 Nassau St, New York, NY 10038, United States",
+            "phone": "+1 646-476-5084",
+            "website": "https://www.google.com/url?q=https://www.immthainyc.com/&opi=79508299&sa=U&ved=0ahUKEwjEidOuqJiSAxVXwTgGHX2gEUkQ61gIGSgQ&usg=AOvVaw3tJktnuyKZdL1Cww960-5X"
+        },
+        {
+            "title": "Mezcali",
+            "rating": 4.7,
+            "reviews_count": 1986,
+            "category": "Mexican restaurant",
+            "address": "83 Maiden Ln, New York, NY 10038, United States",
+            "phone": "+1 917-409-5881",
+            "website": "https://www.google.com/url?q=https://www.mezcalinyc.com/&opi=79508299&sa=U&ved=0ahUKEwjSteevqJiSAxV4umMGHcAfHz4Q61gIGSgQ&usg=AOvVaw2VI4TW3Lb6xAVa3olTAgd4"
+        },
+        {
+            "title": "Luthun",
+            "rating": 4.8,
+            "reviews_count": 336,
+            "category": "Fine dining restaurant",
+            "address": "432 E 13th St, New York, NY 10009, United States",
+            "phone": "+1 646-454-9484",
+            "website": "https://www.google.com/url?q=https://www.luthun.com/&opi=79508299&sa=U&ved=0ahUKEwjdwfywqJiSAxXp3TgGHZQRAwkQ61gIGCgQ&usg=AOvVaw1KzlOuvXNw36qbNwuHrEMQ"
+        },
+        {
+            "title": "Nobu Downtown",
+            "rating": 4.4,
+            "reviews_count": 1932,
+            "category": "Japanese restaurant",
+            "address": "195 Broadway, New York, NY 10007, United States",
+            "phone": "+1 212-219-0500",
+            "website": "https://www.google.com/url?q=https://www.noburestaurants.com/downtown/home/%3Futm_source%3Dgoogle%26utm_medium%3DYext&opi=79508299&sa=U&ved=0ahUKEwj65I6yqJiSAxXc3zgGHcPjBHQQ61gIGCgQ&usg=AOvVaw11QPtmWPIKio85D0if5r-k"
+        },
+        {
+            "title": "Da Claudio NYC Ristorante",
+            "rating": 4.5,
+            "reviews_count": 881,
+            "category": "Italian restaurant",
+            "address": "21 Ann St, New York, NY 10038, United States",
+            "phone": "+1 212-285-2668",
+            "website": "https://www.google.com/url?q=http://www.daclaudionyc.com/&opi=79508299&sa=U&ved=0ahUKEwjP0aOzqJiSAxUuzDgGHTfjHqMQ61gIGSgQ&usg=AOvVaw0qo9yJ5a197WR-2DgxHFvE"
+        },
+        {
+            "title": "Osteria Carlina West Village",
+            "rating": 4.7,
+            "reviews_count": 885,
+            "category": "Northern Italian restaurant",
+            "address": "455 Hudson St, New York, NY 10014, United States",
+            "phone": "+1 646-559-5137",
+            "website": "https://www.google.com/url?q=http://www.osteriacarlina.com/&opi=79508299&sa=U&ved=0ahUKEwik9ra0qJiSAxXp3TgGHZQRAwkQ61gIGCgQ&usg=AOvVaw3ODJ66ybbx6NmhiCaPsHNR"
+        },
+        {
+            "title": "Crown Shy",
+            "rating": 4.5,
+            "reviews_count": 1726,
+            "category": "American restaurant",
+            "address": "70 Pine St Ground Floor, New York, NY 10005, United States",
+            "phone": "+1 212-517-1932",
+            "website": "https://www.google.com/url?q=https://www.crownshy.nyc/&opi=79508299&sa=U&ved=0ahUKEwi--c21qJiSAxVKg2MGHbKCNJkQ61gIGCgQ&usg=AOvVaw2MSvcJyKXvcMtYOZhejKSo"
+        },
+        {
+            "title": "Sushi Nakazawa",
+            "rating": 4.5,
+            "reviews_count": 1912,
+            "category": "Sushi restaurant",
+            "address": "23 Commerce St, New York, NY 10014, United States",
+            "phone": "+1 212-924-2212",
+            "website": "https://www.google.com/url?q=http://sushinakazawa.com/&opi=79508299&sa=U&ved=0ahUKEwi87ea2qJiSAxUe1zgGHfK4EbQQ61gIGCgQ&usg=AOvVaw1v-WIMckJ2EPZaUQoLnpGh"
+        },
+        {
+            "title": "Temple Court",
+            "rating": 4.5,
+            "reviews_count": 1367,
+            "category": "Fine dining restaurant",
+            "address": "5 Beekman St, New York, NY 10038, United States",
+            "phone": "+1 917-728-4685",
+            "website": "https://www.google.com/url?q=https://www.templecourtnyc.com/&opi=79508299&sa=U&ved=0ahUKEwji_fm3qJiSAxWb6jgGHd3REgwQ61gIGSgQ&usg=AOvVaw0CcNk2AjJKzS6wQMo95p3q"
+        },
+        {
+            "title": "NYC Falafel Co",
+            "rating": 4.6,
+            "reviews_count": 253,
+            "category": "Falafel restaurant",
+            "address": "201 Allen St, New York, NY 10002, United States",
+            "phone": "+1 646-470-2343",
+            "website": "https://www.google.com/url?q=http://www.nycfalafel.net/&opi=79508299&sa=U&ved=0ahUKEwiEi4-5qJiSAxWw7TgGHd-qLO0Q61gIGCgQ&usg=AOvVaw0WlcW11reD_YmrdXci7lHH"
+        },
+        {
+            "title": "NAR Modern Turkish Cuisine",
+            "rating": 4.7,
+            "reviews_count": 596,
+            "category": "Turkish restaurant",
+            "address": "34 E 20th St #3, New York, NY 10003, United States",
+            "phone": "+1 917-388-3195",
+            "website": "https://www.google.com/url?q=http://www.narrestaurant.nyc/%3Futm_source%3Dgoogle%26utm_medium%3Dwix_google_business_profile%26utm_campaign%3D4021253192733080432&opi=79508299&sa=U&ved=0ahUKEwi7vKS6qJiSAxWW1DgGHee7N7gQ61gIGSgQ&usg=AOvVaw0GgH2AYnhncxst77tnnzuW"
+        },
+        {
+            "title": "Petite Boucherie",
+            "rating": 4.7,
+            "reviews_count": 2007,
+            "category": "French restaurant",
+            "address": "First Floor, 14 Christopher St, New York, NY 10014, United States",
+            "phone": "+1 646-756-4145",
+            "website": "https://www.google.com/url?q=https://www.boucherieus.com/&opi=79508299&sa=U&ved=0ahUKEwioqcG7qJiSAxVv2TgGHXvgEdgQ61gIGygS&usg=AOvVaw17xmNYoVLrCAXLwc2LWZP-"
+        },
+        {
+            "title": "Forsythia NYC",
+            "rating": 4.4,
+            "reviews_count": 405,
+            "category": "Italian restaurant",
+            "address": "9 Stanton St, New York, NY 10002, United States",
+            "phone": null,
+            "website": "https://www.google.com/url?q=http://forsythianyc.com/&opi=79508299&sa=U&ved=0ahUKEwi_xtq8qJiSAxWqzzgGHY1yKmUQ61gIFCgM&usg=AOvVaw07EJ_9Z6KwcsPBXDwOopSK"
+        },
+        {
+            "title": "GOLDEN WUISH (THE DUCKHOUSE)",
+            "rating": 4.4,
+            "reviews_count": 473,
+            "category": "Asian restaurant",
+            "address": "6 Platt St, New York, NY 10038, United States",
+            "phone": "+1 917-262-0528",
+            "website": "https://www.google.com/url?q=https://www.goldenwuish.com/&opi=79508299&sa=U&ved=0ahUKEwiLv_C9qJiSAxXZzzgGHYlBFOoQ61gIGSgQ&usg=AOvVaw2ZRkSzaDzTY19BdogRQNTr"
+        }
+    ]
+}
